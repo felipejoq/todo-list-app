@@ -95,7 +95,7 @@ const isEmptyTasks = () => {
 
 const drawEmptyTasksMessage = () => {
     textEmptyTasks.classList.replace('d-none', 'd-block')
-    textEmptyTasks.innerText = 'Aun no hay tareas programadas.'
+    textEmptyTasks.innerText = 'There are no scheduled tasks yet...'
 }
 
 const removeEmptyTasksMessage = () => {
