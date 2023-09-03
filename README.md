@@ -1,6 +1,10 @@
 # Simple TODO List App
 
-Un ejercicio para poner a prueba conocimientos sobre javascript realizando esta pequeña, simple pero funcional aplicación de la típica "lista de tareas" o también conocida popularmente como "TODO List App".
+[ ⬆️ ACTUALIZACIÓN ]
+
+- Migración a React.js 18
+
+⚙️ Un ejercicio para poner a prueba conocimientos sobre javascript realizando esta pequeña, simple pero funcional aplicación de la típica "lista de tareas" o también conocida popularmente como "TODO List App".
 
 👉 [Live Demo](https://felipejoq.github.io/todo-list-app) 📝
 
