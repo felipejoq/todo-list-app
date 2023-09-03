@@ -25,4 +25,4 @@ Ingredidad, funciones, arrays, Local Storage, módulos, elementos html, css, ent
 
 ## Vista previa
 
-![alt text](https://github.com/felipejoq/todo-list-app/blob/main/preview.png?raw=true)
+![alt text](https://github.com/felipejoq/todo-list-app/blob/main/preview-min.png?raw=true)
