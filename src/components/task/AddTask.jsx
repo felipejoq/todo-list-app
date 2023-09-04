@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { TasksSummary } from "./TasksSummary";
 import { TaskList } from "./TaskList";
 import { useLocalStorage } from "../../hooks/useLocalStorage";

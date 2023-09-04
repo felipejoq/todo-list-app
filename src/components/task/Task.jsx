@@ -1,18 +1,23 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export const Task = ({ task, index, handleChecked, handleDelete }) => {
-    const taskCheckBox = useRef(null)
+
+    const [checked, setChecked] = useState(task.completed)
+
+    const taskCheckBox = useRef(null);
 
     const checkTask = () => {
-        const checked = !task.completed;
-        task.completed = checked;
-        handleChecked(taskCheckBox.current.id, checked)
+        const newChecked = !checked;
+        setChecked(newChecked);
     }
 
     const deleteTask = () => {
-        // setCompleted(!completed);
         handleDelete(taskCheckBox.current.id)
     }
+
+    useEffect(() => {
+        handleChecked(taskCheckBox.current.id, checked)
+    }, [checked]);
 
     return (
         <div className='task'>
@@ -22,7 +27,7 @@ export const Task = ({ task, index, handleChecked, handleDelete }) => {
                 className="task-checkbox"
                 type="checkbox"
                 name="completed"
-                checked={task.completed}
+                checked={checked}
                 onChange={checkTask}
             />
             <div className="body-task">

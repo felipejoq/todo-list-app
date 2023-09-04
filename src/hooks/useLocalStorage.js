@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
+import { initData } from "../data/initialData";
 
 function getStorageValue(key, defaultValue) {
+
+  // Personalize this to Tasks app
+  if (key === 'tasks') {
+    localStorage.setItem(key, JSON.stringify(initData));
+  }
+
   // getting stored value
   const saved = localStorage.getItem(key);
   const initial = JSON.parse(saved);

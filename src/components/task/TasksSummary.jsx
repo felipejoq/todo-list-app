@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
+
 export const TasksSummary = ({ tasks }) => {
 
-    const total = tasks.length;
-    const completed = tasks.filter(task => task.completed).length;
-    const uncompleted = total - completed;
+    const [summary, setSummary] = useState({total: 0, completed: 0, uncompleted: 0})
+
+    useEffect(() => {
+        const newSummary = {
+            total: tasks.length,
+            completed: tasks.filter(task => task.completed).length,
+            uncompleted: tasks.filter(task => !task.completed).length
+        }
+
+        setSummary(newSummary);
+
+    }, [tasks]);
+    
+    const { total, completed, uncompleted } = summary;
 
     return (
         <div className="summary-tasks">
